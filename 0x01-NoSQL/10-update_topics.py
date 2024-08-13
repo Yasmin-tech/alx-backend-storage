@@ -8,5 +8,7 @@
 def update_topics(mongo_collection, name, topics):
     ''' change the topics of the givin document's name
         '''
-    new_doument = mongo_collection.update_one(
-            {"name": name}, {"$set": {"topics": topics}})
+    mongo_collection.update_many(
+            {'name': name},
+            {'$set': {'topics': topics}}
+    )
