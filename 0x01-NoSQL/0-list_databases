@@ -1,2 +1,2 @@
 // This file for to be executed on mongo shell to list all databases in the default database
-show dbs
+show databases;
