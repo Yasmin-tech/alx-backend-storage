@@ -1,0 +1,2 @@
+//  a script that creates or uses the database my_db in mono shell
+use my_db
