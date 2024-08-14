@@ -28,7 +28,7 @@ class Cache():
                 using the random key and return the key
         '''
 
-    def __init__(self):
+    def __init__(self) -> None:
         '''store an instance of the Redis client as a private variable
         named _redis (using redis.Redis())
         and flush the instance using flushdb
@@ -36,7 +36,7 @@ class Cache():
         self._redis = redis.Redis()
         self._redis.flushall()
 
-    def store(self, data: Union[str, int, float, bytes]) -> str:
+    def store(self, data: Union[str, bytes, int, float]) -> str:
         '''  generate a random key (e.g. using uuid),
             store the input data in Redis
             using the random key and return the key
