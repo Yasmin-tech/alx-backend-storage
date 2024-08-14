@@ -34,7 +34,7 @@ class Cache():
         and flush the instance using flushdb
         '''
         self._redis = redis.Redis()
-        self._redis.flushall()
+        self._redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         '''  generate a random key (e.g. using uuid),
